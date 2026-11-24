@@ -52,9 +52,6 @@
             line-height: 1.45;
             margin-bottom: 14px;
         }
-        .item-desc.no-meta {
-            margin-bottom: 0;
-        }
         
         .item-meta {
             display: flex;
@@ -73,7 +70,24 @@
             font-size: 0.85rem;
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             transition: background 0.2s, border-color 0.2s;
+        }
+
+        /* Stacked Dual Buttons */
+        .btn-stack {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .btn-stack .buy-btn {
+            width: 100%;
+        }
+        .or-divider {
+            font-size: 0.75rem;
+            color: #888;
+            line-height: 1;
         }
 
         /* Charmed Crow Collective (Sage Green) */
@@ -100,6 +114,17 @@
             border-color: #f09513;
         }
 
+        /* Parcera Vintage (Teal) */
+        .buy-btn.parcera-btn {
+            background: #18222d;
+            color: #ffffff;
+            border: 1px solid #4db6ac;
+        }
+        .buy-btn.parcera-btn:hover {
+            background: #1e2d3d;
+            border-color: #80cbc4;
+        }
+
         @media (max-width: 500px) {
             .wishlist-item {
                 padding: 16px;
@@ -107,9 +132,6 @@
             }
             .item-desc {
                 margin-bottom: 12px;
-            }
-            .item-desc.no-meta {
-                margin-bottom: 0;
             }
             .item-meta {
                 justify-content: flex-end;
@@ -132,7 +154,11 @@
                 <div class="item-desc">17" x 6.75" corduroy bag with a rubber worm zipper pull and adjustable cotton strap</div>
                 <div class="item-meta">
                     <span class="price crow-price">$65.00</span>
-                    <a href="https://www.charmedcrowcollective.com/products/the-fish-bag-fruity" target="_blank" class="buy-btn crow-btn">Buy on Charmed Crow</a>
+                    <div class="btn-stack">
+                        <a href="https://www.charmedcrowcollective.com/products/the-fish-bag-fruity" target="_blank" class="buy-btn crow-btn">Buy on Charmed Crow</a>
+                        <span class="or-divider">or</span>
+                        <a href="https://maps.apple/p/kx~iXV_q6fisn0" target="_blank" class="buy-btn crow-btn">Buy at Charmed Crow</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -184,7 +210,11 @@
             <div class="item-details">
                 <div class="item-title">Beneath The Skin</div>
                 <div class="item-edition">Deluxe Edition CD — Of Monsters and Men</div>
-                <div class="item-desc no-meta">Physical deluxe edition album on CD</div>
+                <div class="item-desc">Physical deluxe edition album on CD</div>
+                <div class="item-meta">
+                    <span class="price amazon-price">$9.75</span>
+                    <a href="https://www.amazon.com/dp/B00US7XARU" target="_blank" class="buy-btn amazon-btn">Buy on Amazon</a>
+                </div>
             </div>
         </div>
 
@@ -193,7 +223,10 @@
             <div class="rank">6</div>
             <div class="item-details">
                 <div class="item-title">Parcera Vintage Gift Card</div>
-                <div class="item-desc no-meta">Gift card for Parcera Vintage on Broadway</div>
+                <div class="item-desc">Gift card for Parcera Vintage on Broadway</div>
+                <div class="item-meta">
+                    <a href="https://maps.apple/p/6MbBabe3DdLMEH" target="_blank" class="buy-btn parcera-btn">Buy at Parcera Vintage</a>
+                </div>
             </div>
         </div>
 
@@ -202,7 +235,10 @@
             <div class="rank">7</div>
             <div class="item-details">
                 <div class="item-title">Flower Press Kit</div>
-                <div class="item-desc no-meta">Looking for a larger size (not small)</div>
+                <div class="item-desc">Looking for a larger size (not small)</div>
+                <div class="item-meta">
+                    <a href="https://www.amazon.com/s?k=Flower+Press+Kit" target="_blank" class="buy-btn amazon-btn">Search Amazon</a>
+                </div>
             </div>
         </div>
 
