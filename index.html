@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ash's List</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        h1 { text-align: center; color: #ffffff; margin-bottom: 28px; }
+        
+        .wishlist-container { display: flex; flex-direction: column; gap: 16px; }
+        
+        .wishlist-item {
+            background: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .wishlist-item:hover { border-color: #555; transform: translateY(-2px); }
+        .rank { font-size: 1.4rem; font-weight: bold; color: #888; min-width: 28px; text-align: center; line-height: 1.2; }
+        .item-details { flex-grow: 1; min-width: 0; }
+        
+        .item-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+        
+        .item-edition {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: #b388ff;
+            margin-bottom: 6px;
+        }
+        
+        .item-desc {
+            font-size: 0.85rem;
+            color: #9e9e9e;
+            line-height: 1.45;
+            margin-bottom: 14px;
+        }
+        .item-desc.no-meta {
+            margin-bottom: 0;
+        }
+        
+        .item-meta {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.95rem;
+            width: 100%;
+        }
+        .price { font-weight: bold; }
+        .buy-btn {
+            padding: 7px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        /* Charmed Crow Collective (Sage Green) */
+        .price.crow-price { color: #81c784; }
+        .buy-btn.crow-btn {
+            background: #18222d;
+            color: #ffffff;
+            border: 1px solid #81c784;
+        }
+        .buy-btn.crow-btn:hover {
+            background: #1e2d3d;
+            border-color: #a5d6a7;
+        }
+
+        /* Amazon (Warm Amber) */
+        .price.amazon-price { color: #d99b00; }
+        .buy-btn.amazon-btn {
+            background: #18222d;
+            color: #ffffff;
+            border: 1px solid #d98200;
+        }
+        .buy-btn.amazon-btn:hover {
+            background: #1e2d3d;
+            border-color: #f09513;
+        }
+
+        @media (max-width: 500px) {
+            .wishlist-item {
+                padding: 16px;
+                gap: 12px;
+            }
+            .item-desc {
+                margin-bottom: 12px;
+            }
+            .item-desc.no-meta {
+                margin-bottom: 0;
+            }
+            .item-meta {
+                justify-content: flex-end;
+                margin-top: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ash's List</h1>
+
+    <div class="wishlist-container">
+
+        <!-- 1 -->
+        <div class="wishlist-item">
+            <div class="rank">1</div>
+            <div class="item-details">
+                <div class="item-title">The Fish Bag - Fruity</div>
+                <div class="item-desc">17" x 6.75" corduroy bag with a rubber worm zipper pull and adjustable cotton strap</div>
+                <div class="item-meta">
+                    <span class="price crow-price">$65.00</span>
+                    <a href="https://www.charmedcrowcollective.com/products/the-fish-bag-fruity" target="_blank" class="buy-btn crow-btn">Buy on Charmed Crow</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="wishlist-item">
+            <div class="rank">2</div>
+            <div class="item-details">
+                <div class="item-title">Portable CD Player Boombox</div>
+                <div class="item-desc">Nextron black boombox with Bluetooth, AM/FM radio, USB playback, and AUX input</div>
+                <div class="item-meta">
+                    <span class="price amazon-price">$49.99</span>
+                    <a href="https://a.co/d/09HPAHB8" target="_blank" class="buy-btn amazon-btn">Buy on Amazon</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="wishlist-item">
+            <div class="rank">3</div>
+            <div class="item-details">
+                <div class="item-title">The Art of Witch Hat Atelier</div>
+                <div class="item-edition">Hardcover</div>
+                <div class="item-desc">184-page gold-stamped hardcover art book by Kamome Shirahama</div>
+                <div class="item-meta">
+                    <span class="price amazon-price">$23.99</span>
+                    <a href="https://a.co/d/07f3ayad" target="_blank" class="buy-btn amazon-btn">Buy on Amazon</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="wishlist-item">
+            <div class="rank">4</div>
+            <div class="item-details">
+                <div class="item-title">Witch Hat Atelier: Grimoire Edition 2</div>
+                <div class="item-edition">Hardcover (Includes Vols. 4–6)</div>
+                <div class="item-desc">Deluxe hardcover edition—I also want editions 3 and up if someone wants to be generous!</div>
+                <div class="item-meta">
+                    <span class="price amazon-price">$34.99</span>
+                    <a href="https://a.co/d/0d0FuiuU" target="_blank" class="buy-btn amazon-btn">Buy on Amazon</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="wishlist-item">
+            <div class="rank">5</div>
+            <div class="item-details">
+                <div class="item-title">Beneath The Skin</div>
+                <div class="item-edition">Deluxe Edition CD — Of Monsters and Men</div>
+                <div class="item-desc no-meta">Physical deluxe edition album on CD</div>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="wishlist-item">
+            <div class="rank">6</div>
+            <div class="item-details">
+                <div class="item-title">Parcera Vintage Gift Card</div>
+                <div class="item-desc no-meta">Gift card for Parcera Vintage on Broadway</div>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="wishlist-item">
+            <div class="rank">7</div>
+            <div class="item-details">
+                <div class="item-title">Flower Press Kit</div>
+                <div class="item-desc no-meta">Looking for a larger size (not small)</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
